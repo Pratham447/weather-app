@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weather Dashboard | Pratham</title>
+<meta name="description" content="Live weather by city using the Open-Meteo API. Built by Pratham.">
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+</head>
+<body>
+<main class="app">
+  <h1>Weather Dashboard</h1>
+  <form id="search-form">
+    <label for="city" class="sr">City name</label>
+    <input id="city" type="text" placeholder="Search a city, e.g. Delhi" autocomplete="off" required>
+    <button type="submit">Search</button>
+  </form>
+
+  <p id="message" role="status" aria-live="polite"></p>
+
+  <section id="current" class="card" aria-labelledby="place" hidden>
+    <h2 id="place"></h2>
+    <p class="big"><span id="icon" aria-hidden="true"></span> <span id="temp"></span></p>
+    <p id="desc"></p>
+    <dl class="stats">
+      <div><dt>Feels like</dt><dd id="feels"></dd></div>
+      <div><dt>Humidity</dt><dd id="humidity"></dd></div>
+      <div><dt>Wind speed</dt><dd id="wind"></dd></div>
+    </dl>
+  </section>
+
+  <section id="forecast-wrap" aria-labelledby="fc" hidden>
+    <h2 id="fc">5-day forecast</h2>
+    <ul id="forecast"></ul>
+  </section>
+</main>
+</body>
+</html>
